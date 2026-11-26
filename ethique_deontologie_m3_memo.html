@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — La lutte contre la corruption</title>
+<style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}</style></head>
+<body>
+<header class="bandeau"><div class="wrap">
+ <div class="chapitre">Éthique et déontologie <span>/</span> Module 3</div><h1>La lutte contre la corruption</h1><p class="sous">Fiche mémo — corruption active et passive, trafic d'influence, Sapin II, cadeaux, lanceur d'alerte</p>
+</div></header>
+<div class="wrap">
+<a class="dl" href="ETHIQUE_M3_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<h2><span class="num">1 ·</span>Les définitions</h2>
+<div class="carte">
+<table><thead><tr><th>Infraction</th><th>Ce que c'est</th><th>Texte</th></tr></thead><tbody>
+<tr><td><b>Corruption active</b></td><td><b>Proposer</b> ou <b>céder</b> à une sollicitation : offrir un avantage pour qu'une personne accomplisse ou s'abstienne d'accomplir un acte de sa fonction.</td><td>Art. 433-1 (agent public) · art. 445-1 (privé) C. pén.</td></tr>
+<tr><td><b>Corruption passive</b></td><td><b>Solliciter</b> ou <b>accepter</b> un avantage pour accomplir ou s'abstenir d'accomplir un acte de sa fonction.</td><td>Art. 432-11 (agent public) · art. 445-2 (privé) C. pén.</td></tr>
+<tr><td><b>Trafic d'influence</b></td><td>Monnayer son <b>influence</b>, réelle ou supposée, pour obtenir d'une autorité ou d'une administration une décision favorable. Trois personnes : celui qui paie, celui qui vend son influence, l'autorité visée.</td><td>Art. 432-11, 433-1 et 433-2 C. pén.</td></tr>
+</tbody></table>
+<div class="enc"><span class="t">PUBLIQUE OU PRIVÉE ?</span>La corruption est <b>publique</b> quand une personne dépositaire de l'autorité publique, chargée d'une mission de service public ou investie d'un mandat électif est en jeu. Elle est <b>privée</b> entre acteurs économiques : un courtier et un salarié de banque, par exemple.</div>
+</div>
+<h2><span class="num">2 ·</span>Ce qui constitue le délit</h2>
+<div class="carte">
+<div class="duo"><div><div class="h">Les éléments</div>Un <b>avantage</b> de toute nature (argent, cadeau, invitation, emploi d'un proche, don à une association) ; une <b>contrepartie</b> attendue liée à la fonction ; une <b>intention</b>.</div><div><div class="h">Ce qui ne change rien</div>L'avantage est <b>refusé</b> · l'acte n'est <b>pas accompli</b> · l'offre passe par un <b>intermédiaire</b> · l'avantage profite à un <b>tiers</b> · la proposition est faite <b>après</b> l'acte.</div></div>
+<div class="enc al"><span class="t">À TOUT MOMENT</span>Le délit est constitué dès l'offre ou la sollicitation, « à tout moment ». Il n'est pas nécessaire que le pacte précède l'acte ni qu'il soit exécuté.</div>
+</div>
+<h2><span class="num">3 ·</span>Les sanctions</h2>
+<div class="carte">
+<table><thead><tr><th></th><th>Personne physique</th><th>Personne morale</th></tr></thead><tbody>
+<tr><td>Corruption et trafic d'influence <b>publics</b></td><td><b>10 ans</b> et <b>1 000 000 €</b>, ou le double du produit de l'infraction</td><td>Amende quintuple : <b>5 000 000 €</b>, ou dix fois le produit</td></tr>
+<tr><td>Corruption <b>privée</b> et trafic d'influence entre particuliers</td><td><b>5 ans</b> et <b>500 000 €</b>, ou le double du produit</td><td>Amende quintuple : <b>2 500 000 €</b>, ou dix fois le produit</td></tr>
+<tr><td>Peines complémentaires</td><td>Interdiction d'exercer, inéligibilité, confiscation</td><td>Exclusion des marchés publics, programme de mise en conformité sous contrôle de l'AFA</td></tr>
+</tbody></table>
+<p>Pour l'entreprise, la <b>convention judiciaire d'intérêt public</b> (CJIP) évite le procès en échange d'une amende pouvant atteindre <b>30 % du chiffre d'affaires</b> annuel moyen et d'un programme de mise en conformité.</p>
+</div>
+<h2><span class="num">4 ·</span>La loi Sapin II</h2>
+<div class="carte">
+<div class="enc"><span class="t">LOI N° 2016-1691 DU 9 DÉCEMBRE 2016, ART. 17</span>Les sociétés d'au moins <b>500 salariés</b> (ou appartenant à un groupe de cette taille) et dont le chiffre d'affaires dépasse <b>100 M€</b> doivent mettre en œuvre <b>8 mesures</b> de prévention. Contrôle : l'<b>Agence française anticorruption</b> (AFA).</div>
+<table><thead><tr><th>Mesure</th><th>En pratique</th></tr></thead><tbody>
+<tr><td>1. Code de conduite</td><td>Intégré au règlement intérieur ; définit et illustre les comportements interdits.</td></tr>
+<tr><td>2. Dispositif d'alerte interne</td><td>Recueillir les signalements des salariés.</td></tr>
+<tr><td>3. Cartographie des risques</td><td>Identifier, analyser et hiérarchiser les risques par activité et par zone.</td></tr>
+<tr><td>4. Évaluation des tiers</td><td>Clients, fournisseurs, intermédiaires : apporteurs d'affaires et courtiers compris.</td></tr>
+<tr><td>5. Contrôles comptables</td><td>Vérifier que les livres ne masquent pas de corruption.</td></tr>
+<tr><td>6. Formation</td><td>Des cadres et des personnels les plus exposés.</td></tr>
+<tr><td>7. Régime disciplinaire</td><td>Sanctionner les manquements au code de conduite.</td></tr>
+<tr><td>8. Contrôle et évaluation interne</td><td>Vérifier que les mesures fonctionnent.</td></tr>
+</tbody></table>
+<div class="enc ci"><span class="t">NON ASSUJETTI NE VEUT PAS DIRE NON CONCERNÉ</span>Un cabinet de courtage de 5 personnes n'a pas à déployer les 8 mesures, mais le Code pénal s'applique à lui comme à tous. Et il sera évalué comme tiers par les banques qui y sont soumises.</div>
+</div>
+<h2><span class="num">5 ·</span>Cadeaux et invitations</h2>
+<div class="carte">
+<table><thead><tr><th>Critère</th><th>La question à se poser</th></tr></thead><tbody>
+<tr><td>Valeur</td><td>Dépasse-t-elle le seuil fixé par la politique cadeaux de l'établissement ?</td></tr>
+<tr><td>Moment</td><td>Intervient-elle pendant une négociation, un appel d'offres, l'instruction d'un dossier ?</td></tr>
+<tr><td>Fréquence</td><td>Est-ce répété avec la même personne ?</td></tr>
+<tr><td>Transparence</td><td>Serais-je à l'aise si ma hiérarchie ou la presse l'apprenait ?</td></tr>
+</tbody></table>
+<div class="enc al"><span class="t">LE RÉFLEXE</span>En cas de doute : refuser poliment, ou déclarer au responsable ou à la conformité, qui inscrit au registre. Jamais d'espèces, jamais de cadeau personnel pendant l'instruction d'un dossier.</div>
+</div>
+<h2><span class="num">6 ·</span>Le lanceur d'alerte</h2>
+<div class="carte">
+<div class="duo"><div><div class="h">Qui est protégé</div>Une personne physique qui signale, <b>sans contrepartie financière directe</b> et de <b>bonne foi</b>, un crime, un délit ou une violation de la loi (loi Sapin II, art. 6, modifiée par la loi n° 2022-401 du 21 mars 2022, dite loi Waserman).</div><div><div class="h">Comment il est protégé</div>Libre choix entre canal <b>interne</b> et canal <b>externe</b> (autorité compétente, Défenseur des droits) ; <b>confidentialité</b> de son identité ; nullité des <b>représailles</b> ; irresponsabilité civile et pénale sous conditions.</div></div>
+<p>Les entreprises d'au moins <b>50 salariés</b> doivent mettre en place une procédure interne de recueil des signalements. Faire obstacle à une alerte est puni d'<b>1 an</b> d'emprisonnement et de <b>15 000 €</b> d'amende.</p>
+</div>
+<h2><span class="num">7 ·</span>Ce qui tombe à l'examen</h2>
+<div class="carte">
+<ol class="q"><li>Corruption active = proposer ou céder ; passive = solliciter ou accepter.</li><li>Trafic d'influence : l'influence, réelle ou supposée, sur une autorité publique.</li><li>Le délit existe dès l'offre, même refusée, même par intermédiaire.</li><li>Publique : 10 ans et 1 M€ ; privée : 5 ans et 500 000 €.</li><li>Sapin II : 500 salariés et 100 M€ ; 8 mesures ; contrôle par l'AFA.</li><li>Lanceur d'alerte : canal interne ou externe au choix, confidentialité, pas de représailles.</li></ol>
+</div>
+
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</div>
+</body></html>
